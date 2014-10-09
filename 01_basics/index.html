@@ -63,7 +63,22 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript">
 
-		// your code goes here!
+		// select the data using jquery
+		var $data = $('.data');
+
+		// loop over each piece of data
+		$data.each(function(index,el) {
+
+			// "eval"uate each piece of data
+			var type = eval( 'typeof ' + el.innerHTML);
+
+			// put the response in the corresponding "type" tag
+		 	$(el).parent().siblings('.type').text(type);
+			
+
+		});
+
+
 
 	</script>
 </body>

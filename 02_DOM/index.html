@@ -16,33 +16,38 @@
 		<p class="description">This grid contains a list of JavaScript objects. Write some JavaScript that collects, analyzes, and reports back on these object types.</p>
 
 		<section class="article-mod">
-			<p>&ldquo;Hey Philo, can I ask you something?&rdquo; May says, setting down her tools.</p>
 
-			<p>&ldquo;Sure,&rdquo; Philo answers.</p>
 
-			<p>&ldquo;Is it weird to be invented?&rdquo;</p>
+				<p>&ldquo;Hey Philo, can I ask you something?&rdquo; May says, setting down her tools.</p>
 
-			<p>&ldquo;What do you mean by invented?&rdquo; Philo says.</p>
+				<p>&ldquo;Sure,&rdquo; Philo answers.</p>
 
-			<p>&ldquo;I mean, you get rebuilt all the time. We found you in the desert without a body. You can be updated with new programming. Like just now&#8202;&mdash;&#8202;we installed Japanese and some stuff about plants and retrieved a bunch of your stored data on the Casino. Isn&rsquo;t that weird?&rdquo;</p>
+				<p>&ldquo;Is it weird to be invented?&rdquo;</p>
 
-			<p>&ldquo;I suppose it would be &lsquo;weird&rsquo; if there were some other option. But this is all I know,&rdquo; Philo says. &ldquo;You were invented, in your own way.&rdquo;</p>
+				<p>&ldquo;What do you mean by invented?&rdquo; Philo says.</p>
 
-			<p>&ldquo;I wasn&rsquo;t invented, I was born,&rdquo; May says.</p>
+				<p>&ldquo;I mean, you get rebuilt all the time. We found you in the desert without a body. You can be updated with new programming. Like just now&#8202;&mdash;&#8202;we installed Japanese and some stuff about plants and retrieved a bunch of your stored data on the Casino. Isn&rsquo;t that weird?&rdquo;</p>
 
-			<p>&ldquo;Yes, but someone made you. Consider the fact that absolutely no living thing came into existence on its own. That was a decision made by someone else. We are all here involuntarily,&rdquo; Philo says.</p>
+				<p>&ldquo;I suppose it would be &lsquo;weird&rsquo; if there were some other option. But this is all I know,&rdquo; Philo says. &ldquo;You were invented, in your own way.&rdquo;</p>
 
-			<p>&ldquo;Well that&rsquo;s uplifting,&rdquo; May says.</p>
+				<p>&ldquo;I wasn&rsquo;t invented, I was born,&rdquo; May says.</p>
 
-			<p>&ldquo;It&rsquo;s a fact,&rdquo; Philo says.</p>
+				<p>&ldquo;Yes, but someone made you. Consider the fact that absolutely no living thing came into existence on its own. That was a decision made by someone else. We are all here involuntarily,&rdquo; Philo says.</p>
 
-			<p>&ldquo;So if we all came here against our will, how come we feel like we&rsquo;re so important?&rdquo; May asks.</p>
+				<p>&ldquo;Well that&rsquo;s uplifting,&rdquo; May says.</p>
 
-			<p>&ldquo;Maybe it&rsquo;s because someone thought we were important enough to invent,&rdquo; Philo says.</p>
+				<p>&ldquo;It&rsquo;s a fact,&rdquo; Philo says.</p>
 
-			<p>&ldquo;Well I&rsquo;m glad someone invented you, whoever that was&rdquo; May says.</p>
+				<p>&ldquo;So if we all came here against our will, how come we feel like we&rsquo;re so important?&rdquo; May asks.</p>
 
-			<p>&ldquo;And I&rsquo;m glad someone invented you, whoever that was,&rdquo; Philo says, &ldquo;so you could update my programming.&rdquo;</p>
+				<p>&ldquo;Maybe it&rsquo;s because someone thought we were important enough to invent,&rdquo; Philo says.</p>
+
+				<p>&ldquo;Well I&rsquo;m glad someone invented you, whoever that was&rdquo; May says.</p>
+
+				<p>&ldquo;And I&rsquo;m glad someone invented you, whoever that was,&rdquo; Philo says, &ldquo;so you could update my programming.&rdquo;</p>
+			
+
+
 		</section>
 
 		<aside class="popular-stories-mod">
@@ -65,7 +70,28 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript">
 
-		// your code goes here!
+		$(document).ready(function(){
+
+			var popular_stories = $( "aside.popular-stories-mod" );
+			var p = $( "section.article-mod" ).find( "p" ).first();	
+			var ad = $( "div.ad" );
+			var end_of_story = $("p:last-child");
+					
+			
+			popular_stories.insertAfter("p:nth-child(3)");
+
+			popular_stories.css("max-width","300px").css("clear","right");
+
+			ad.insertBefore(p);			
+
+
+			console.log(popular_stories);
+			console.log(p);
+			console.log(p);
+			console.log(end_of_story);
+
+
+		});
 
 	</script>
 </body>
